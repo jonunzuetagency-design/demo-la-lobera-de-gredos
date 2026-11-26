@@ -500,3 +500,26 @@ h2 em{color:var(--castano);font-weight:300}
 
 .hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .hero__vid::-webkit-media-controls{display:none!important}
+
+/* ===== Retoques: La finca ordenada ===== */
+.finca__grid{grid-template-columns:1.15fr 1fr!important;grid-template-rows:auto auto;gap:clamp(1.4rem,3vw,2.6rem)!important;align-items:start!important}
+.finca__fig--a{grid-column:1!important;grid-row:1 / span 2!important;aspect-ratio:4/3.4!important;margin:0!important;border-radius:4px}
+.finca__text{grid-column:2!important;grid-row:1!important;align-self:start!important}
+.finca__fig--b{grid-column:2!important;grid-row:2!important;margin:0!important;aspect-ratio:16/10!important;overflow:hidden!important;border-radius:4px}
+.finca__fig--b img{aspect-ratio:auto!important;height:100%}
+.finca__fig--b figcaption{position:absolute;left:.8rem;bottom:.8rem;margin:0;background:rgba(26,30,22,.6);color:#fff;padding:.3rem .7rem;border-radius:99px;font-size:.7rem}
+@media(max-width:800px){.finca__grid{grid-template-columns:1fr!important}.finca__fig--a,.finca__text,.finca__fig--b{grid-column:1!important;grid-row:auto!important}}
+
+/* ===== La casa: los cuatro capítulos a la vista, sin scroll ===== */
+.materia__body{display:grid!important;grid-template-columns:1fr!important}
+.materia__visual{display:none!important}
+.materia__chapters{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,2vw,1.8rem)}
+.chapter{min-height:0!important;opacity:1!important;padding:0!important;border:0!important;justify-content:flex-start!important}
+.chapter__img{display:block!important;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;margin-bottom:1.2rem;transition:transform 1.2s var(--ease)}
+.chapter:hover .chapter__img{transform:scale(1.03)}
+.chapter__n{margin:0 0 .5rem!important}
+.chapter__t{font-size:clamp(2.2rem,3.4vw,3.2rem)!important;margin-bottom:.7rem!important}
+.chapter__p{font-size:.95rem!important}
+.chapter__d{margin-top:1rem!important}
+@media(max-width:1000px){.materia__chapters{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.materia__chapters{grid-template-columns:1fr}}
