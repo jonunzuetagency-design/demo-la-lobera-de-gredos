@@ -476,3 +476,8 @@ h2 em{color:var(--castano);font-weight:300}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
   .js .loader{display:none}
 }
+/* legibilidad sobre el vídeo */
+.hero__shade{background:linear-gradient(180deg,rgba(18,21,15,.55) 0%,rgba(18,21,15,.2) 30%,rgba(18,21,15,.35) 55%,rgba(18,21,15,.78) 100%),radial-gradient(70% 60% at 85% 70%,rgba(18,21,15,.55),transparent 70%),radial-gradient(120% 80% at 0% 100%,rgba(18,21,15,.55),transparent 60%)}
+.hero__sub,.hero__title,.hero__top{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero__scroll{right:auto;left:50%;transform:translateX(-50%)}
+.hero__scroll span{display:none}
