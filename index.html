@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/media-01-gredos-nevado-web.webp">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=3">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LodgingBusiness","name":"La Lobera de Gredos","telephone":"+34670643521","address":{"@type":"PostalAddress","streetAddress":"Paraje La Parrilla s/n","postalCode":"05400","addressLocality":"Arenas de San Pedro","addressRegion":"Ávila","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":40.2217641,"longitude":-5.10975},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"272"},"petsAllowed":true}
@@ -72,7 +72,7 @@
   <div class="hero__media" aria-hidden="true">
     <img class="hero__poster" src="img/media-01-gredos-nevado-web.webp" alt="" fetchpriority="high">
     <div class="hero__video">
-      <iframe data-yt src="https://www.youtube-nocookie.com/embed/0nXahVL65B0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=0nXahVL65B0&amp;controls=0&amp;playsinline=1&amp;modestbranding=1&amp;rel=0&amp;iv_load_policy=3&amp;disablekb=1&amp;fs=0" title="Vídeo aéreo de La Lobera de Gredos" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div id="ytp" data-yt></div>
     </div>
     <div class="hero__shade"></div>
   </div>
@@ -258,7 +258,7 @@
       <a class="strip__item s-t" href="galeria.html#8"><img src="img/cand-h009-t.webp" alt="Habitación con vigas de madera" loading="lazy" draggable="false"></a>
       <a class="strip__item s-w" href="galeria.html#0"><img src="img/cand-h001-t.webp" alt="Casa de piedra y entramado" loading="lazy" draggable="false"></a>
       <a class="strip__item s-s" href="galeria.html#17"><img src="img/media-03-madro-o-web-t.webp" alt="Madroño en flor junto a una casa de piedra" loading="lazy" draggable="false"></a>
-      <a class="strip__item s-w" href="galeria.html#21"><img src="img/media-40-almanzor-t.webp" alt="El Almanzor nevado sobre el río" loading="lazy" draggable="false"></a>
+      <a class="strip__item s-w" href="galeria.html#21"><img src="img/almanzor-hd-t.webp" alt="El Almanzor nevado sobre el río" loading="lazy" draggable="false"></a>
       <a class="strip__item s-t" href="galeria.html#6"><img src="img/cand-h005-t.webp" alt="Comedor con estufa de leña" loading="lazy" draggable="false"></a>
       <a class="strip__item s-w" href="galeria.html#13"><img src="img/media-41-charcar-t.webp" alt="Charca con cascada entre granito" loading="lazy" draggable="false"></a>
       <a class="strip__item s-s" href="galeria.html#16"><img src="img/media-34-cerezo-t.webp" alt="Casita de piedra entre flores" loading="lazy" draggable="false"></a>
@@ -281,36 +281,14 @@
       <a class="link-line" href="https://maps.google.com/?cid=1479299847885901587" target="_blank" rel="noopener">Leerlas en Google</a>
     </div>
 
-    <div class="quotes" data-quotes>
-      <svg class="quotes__mark" viewBox="0 0 80 60" aria-hidden="true"><path d="M0 60V36C0 16 10 4 30 0l4 8C22 12 17 20 17 30h15v30zm46 0V36C46 16 56 4 76 0l4 8c-12 4-17 12-17 22h15v30z"/></svg>
-      <div class="quotes__stage">
-        <figure class="quote is-on">
-          <blockquote>Un lugar precioso en una ubicación fenomenal. Los dueños se preocupan por la comodidad de sus huéspedes. La chef y su equipo adaptan la dieta a las expectativas de sus huéspedes. Higos, peras, manzanas y moras crecen a poca distancia. ¡Nos vemos pronto!</blockquote>
-          <figcaption><b>J. W.</b><span class="mono">★★★★★ · agosto 2025</span></figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote class="is-big">Espectacular sitio en la sierra de Gredos, naturaleza pura y mejores vistas.</blockquote>
-          <figcaption><b>Andrés Fernández Moya</b><span class="mono">★★★★★ · junio 2026</span></figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote class="is-huge">Una experiencia inolvidable.</blockquote>
-          <figcaption><b>Bernat Vidal</b><span class="mono">★★★★★ · julio 2026</span></figcaption>
-        </figure>
-      </div>
-      <div class="quotes__nav">
-        <button type="button" class="is-on" aria-label="Opinión 1"><i></i></button>
-        <button type="button" aria-label="Opinión 2"><i></i></button>
-        <button type="button" aria-label="Opinión 3"><i></i></button>
-        <span class="mono quotes__src">Opiniones reales de Google</span>
-      </div>
-    </div>
+    <div class="rv-belt" aria-label="Opiniones reales de Google"><div class="rv-track"><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Un lugar precioso en una ubicación fenomenal. Los dueños se preocupan por la comodidad de sus huéspedes. La chef y su equipo adaptan la dieta a las expectativas de sus huéspedes.”</p><p class="rv-a"><b>J. W.</b> · agosto 2025 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Espectacular sitio en la sierra de Gredos, naturaleza pura y mejores vistas.”</p><p class="rv-a"><b>Andrés Fernández Moya</b> · junio 2026 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Una experiencia inolvidable.”</p><p class="rv-a"><b>Bernat Vidal</b> · julio 2026 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Un lugar precioso en una ubicación fenomenal. Los dueños se preocupan por la comodidad de sus huéspedes. La chef y su equipo adaptan la dieta a las expectativas de sus huéspedes.”</p><p class="rv-a"><b>J. W.</b> · agosto 2025 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Espectacular sitio en la sierra de Gredos, naturaleza pura y mejores vistas.”</p><p class="rv-a"><b>Andrés Fernández Moya</b> · junio 2026 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Una experiencia inolvidable.”</p><p class="rv-a"><b>Bernat Vidal</b> · julio 2026 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Un lugar precioso en una ubicación fenomenal. Los dueños se preocupan por la comodidad de sus huéspedes. La chef y su equipo adaptan la dieta a las expectativas de sus huéspedes.”</p><p class="rv-a"><b>J. W.</b> · agosto 2025 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Espectacular sitio en la sierra de Gredos, naturaleza pura y mejores vistas.”</p><p class="rv-a"><b>Andrés Fernández Moya</b> · junio 2026 · Google</p></article><article class="rv-card"><p class="rv-st">★★★★★</p><p class="rv-t">“Una experiencia inolvidable.”</p><p class="rv-a"><b>Bernat Vidal</b> · julio 2026 · Google</p></article></div></div>
   </div>
 </section>
 
 <!-- ============ 06 ENTORNO ============ -->
 <section class="entorno" id="entorno">
   <div class="peak" aria-hidden="false">
-    <div class="peak__img"><img src="img/media-40-almanzor.webp" alt="El pico Almanzor nevado sobre el valle" loading="lazy"></div>
+    <div class="peak__img"><img src="img/almanzor-hd.webp" alt="El pico Almanzor nevado sobre el valle" loading="lazy"></div>
     <div class="peak__txt">
       <p class="mono">El techo del Sistema Central</p>
       <p class="peak__t">Almanzor</p>
@@ -336,8 +314,8 @@
           <div><h3>Gargantas y charcas</h3><p>Agua limpia entre granito, a un paseo.</p></div>
           <span class="mono">a pie</span>
         </li>
-        <li class="place" data-img="img/media-40-almanzor-t.webp">
-          <img src="img/media-40-almanzor-t.webp" alt="" loading="lazy">
+        <li class="place" data-img="img/almanzor-hd-t.webp">
+          <img src="img/almanzor-hd-t.webp" alt="" loading="lazy">
           <div><h3>Pico Almanzor</h3><p>2.592 m, la cumbre de Gredos.</p></div>
           <span class="mono">la sierra</span>
         </li>
@@ -450,6 +428,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=2" defer></script>
 </body>
 </html>
