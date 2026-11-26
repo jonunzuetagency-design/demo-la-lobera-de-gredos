@@ -25,25 +25,13 @@
   }
 
   /* ---------- vídeo de portada (YouTube muted autoplay) ---------- */
-  // Solo el tramo limpio del vídeo (2 s – 58 s): sin botones de YouTube al arrancar ni el texto final.
-  const yt = $('[data-yt]');
-  if (yt) {
-    const box = yt.parentElement, A = 2, B = 58;
-    let P, ok = false;
-    window.onYouTubeIframeAPIReady = () => {
-      P = new YT.Player('ytp', { videoId: '0nXahVL65B0', playerVars: { autoplay: 1, mute: 1, controls: 0, playsinline: 1, modestbranding: 1, rel: 0, iv_load_policy: 3, disablekb: 1, fs: 0, start: A },
-        events: {
-          onReady: e => { e.target.mute(); e.target.seekTo(A, true); e.target.playVideo(); },
-          onStateChange: e => { if (e.data === 1 && !ok) { ok = true; setTimeout(() => box.classList.add('on'), 900); } }
-        } });
-      setInterval(() => {
-        if (!P || !P.getCurrentTime) return;
-        const t = P.getCurrentTime();
-        if (t >= B - 1.2 && box.classList.contains('on')) box.classList.remove('on');
-        if (t >= B) { ok = false; P.seekTo(A, true); P.playVideo(); }
-      }, 250);
-    };
-    const tag = document.createElement('script'); tag.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(tag);
+  // Vídeo propio en la web (sin YouTube): aparece cuando ya se está reproduciendo
+  const hv = $('.hero__vid');
+  if (hv) {
+    const on = () => hv.parentElement.classList.add('on');
+    hv.addEventListener('playing', on, { once: true });
+    const p = hv.play(); if (p && p.catch) p.catch(() => {});
+    if (!hv.paused) on();
   }
 
   /* ---------- split de líneas para titulares ---------- */

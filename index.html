@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/media-01-gredos-nevado-web.webp">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LodgingBusiness","name":"La Lobera de Gredos","telephone":"+34670643521","address":{"@type":"PostalAddress","streetAddress":"Paraje La Parrilla s/n","postalCode":"05400","addressLocality":"Arenas de San Pedro","addressRegion":"Ávila","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":40.2217641,"longitude":-5.10975},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"272"},"petsAllowed":true}
@@ -72,7 +72,7 @@
   <div class="hero__media" aria-hidden="true">
     <img class="hero__poster" src="img/media-01-gredos-nevado-web.webp" alt="" fetchpriority="high">
     <div class="hero__video">
-      <div id="ytp" data-yt></div>
+      <video class="hero__vid" autoplay muted loop playsinline preload="auto" poster="img/video-poster.webp"><source src="video/lobera-720.mp4" type="video/mp4" media="(max-width: 900px)"><source src="video/lobera-1080.mp4" type="video/mp4"></video>
     </div>
     <div class="hero__shade"></div>
   </div>
@@ -428,6 +428,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="js/main.js?v=2" defer></script>
+<script src="js/main.js?v=4" defer></script>
 </body>
 </html>
